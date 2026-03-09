@@ -4,7 +4,6 @@ import {
   Bell, 
   Smartphone, 
   TrendingUp, 
-  CheckCircle, 
   AlertCircle, 
   ExternalLink,
   RefreshCw,
@@ -51,13 +50,11 @@ const MOCK_GRANTS = [
 
 const App = () => {
   const [loading, setLoading] = useState(false);
-  const [grants, setGrants] = useState(MOCK_GRANTS);
+  const [grants] = useState(MOCK_GRANTS);
   const [aiAnalysis, setAiAnalysis] = useState("");
-  const [activeTab, setActiveTab] = useState('all');
 
   const simulateUpdate = () => {
     setLoading(true);
-    // 실제 환경에서는 여기서 Python 백엔드 API를 호출합니다.
     setTimeout(() => {
       setAiAnalysis("지비유모빌리티의 7년 초과 시점을 고려할 때, '스마트 물류 DX 실증' 사업이 가장 유망합니다. 특히 온디바이스 AI 기술을 화물차 안전플랫폼에 결합한 형태로 제안할 것을 권장합니다.");
       setLoading(false);
